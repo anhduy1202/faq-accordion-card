@@ -1,0 +1,95 @@
+
+@import "variables";
+@import "mixins";
+html {
+    overflow-x: hidden; //no-scrolling
+    height:100vh;
+font-size:100%;
+box-sizing: border-box;
+
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    position: relative;
+    line-height: 2;
+    height: 100vh;
+    padding:0;
+    margin:0;
+    background: linear-gradient($softViolet,$softBlue);
+    overflow-x:hidden; //no-scrolling
+}
+ul, li {
+list-style-type: none;
+font-family: "Kumbh Sans";
+
+
+&:hover + .box-container { //Move box when hovered, box is the next element
+    transform: translate(-248%,25%);
+
+}
+}
+li {
+line-height: 3;
+
+}
+
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+    &-jc-c {
+        justify-content: center;
+    }
+    &-ai-c {
+    align-items: center;
+    }
+
+    &-jc-fe {
+justify-content: flex-end;
+
+    }
+
+    &-js-fs {
+justify-self: flex-start;
+
+    }
+    &-f-w {
+flex-wrap: wrap;
+
+    }
+}
+
+button {
+font-family: "Kumbh Sans";
+background: white;
+cursor: pointer;
+border-style: none;
+border-bottom: 1px solid $lightGBlue;
+padding-bottom: 1rem;
+transition: color 200ms ease-in-out;
+&:hover {
+
+    color: $softRed; 
+}
+
+}
+
+//Hide 
+.hide-for-mobile {
+
+    @include breakpoint-down(medium) {
+        display:none;
+    }
+    
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(large) {
+        display:none;
+    }
+
+}

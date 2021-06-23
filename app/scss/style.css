@@ -1,0 +1,250 @@
+html {
+  overflow-x: hidden;
+  height: 100vh;
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  line-height: 2;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9, #6565e7);
+  overflow-x: hidden;
+}
+
+ul, li {
+  list-style-type: none;
+  font-family: "Kumbh Sans";
+}
+
+ul:hover + .box-container, li:hover + .box-container {
+  -webkit-transform: translate(-248%, 25%);
+          transform: translate(-248%, 25%);
+}
+
+li {
+  line-height: 3;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-jc-fe {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.flex-js-fs {
+  justify-self: flex-start;
+}
+
+.flex-f-w {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+button {
+  font-family: "Kumbh Sans";
+  background: white;
+  cursor: pointer;
+  border-style: none;
+  border-bottom: 1px solid #e7e7e9;
+  padding-bottom: 1rem;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+button:hover {
+  color: #f47c57;
+}
+
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.card {
+  width: 57.875rem;
+  height: 32.0625rem;
+  border: black solid 2px;
+  border-radius: 30px;
+  background: white;
+  border-style: none;
+  -webkit-box-shadow: 0px 32px 35px 0px rgba(31, 38, 135, 0.4);
+          box-shadow: 0px 32px 35px 0px rgba(31, 38, 135, 0.4);
+}
+
+@media (max-width: 63.9375em) {
+  .card {
+    width: 20.5625rem;
+    height: 32.8125rem;
+  }
+}
+
+.container {
+  -webkit-transform: translateX(40%);
+          transform: translateX(40%);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 65%;
+  width: 60%;
+  padding-left: 3rem;
+}
+
+@media (max-width: 63.9375em) {
+  .container {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    padding-left: 2rem;
+    height: 55%;
+    width: 100%;
+  }
+}
+
+.img-container {
+  position: absolute;
+  -webkit-transform: translateX(-60%);
+          transform: translateX(-60%);
+}
+
+@media (max-width: 63.9375em) {
+  .img-container {
+    -webkit-transform: translateX(-6%);
+            transform: translateX(-6%);
+    top: 0;
+    padding-top: 2.5rem;
+  }
+  .img-container img {
+    width: 15.25rem;
+    height: 11.25rem;
+  }
+}
+
+.shadow {
+  position: absolute;
+  -webkit-transform: translate(-50%, -38%);
+          transform: translate(-50%, -38%);
+}
+
+@media (max-width: 63.9375em) {
+  .shadow {
+    -webkit-transform: translate(5%, 32%) rotateX(50deg) scale(0.9);
+            transform: translate(5%, 32%) rotateX(50deg) scale(0.9);
+  }
+}
+
+.box-container {
+  position: absolute;
+  -webkit-transform: translate(-240%, 25%);
+          transform: translate(-240%, 25%);
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+}
+
+.faq {
+  font-size: 1.75rem;
+  font-weight: 900;
+}
+
+@media (max-width: 63.9375em) {
+  .faq {
+    -webkit-transform: translateX(33%);
+            transform: translateX(33%);
+  }
+}
+
+.question {
+  width: 70%;
+}
+
+.question img {
+  padding-top: 0.75rem;
+  padding-right: 5.625rem;
+  float: right;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+@media (max-width: 63.9375em) {
+  .question {
+    width: 90%;
+  }
+  .question img {
+    padding-top: 1rem;
+    padding-right: 0rem;
+  }
+}
+
+.rotate img {
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.answer {
+  width: 52%;
+  font-family: "Kumbh Sans";
+  font-size: 0.7125rem;
+  padding-left: 0.1125rem;
+}
+
+@media (max-width: 63.9375em) {
+  .answer {
+    width: 85%;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.bold button {
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  font-weight: bolder;
+}
+/*# sourceMappingURL=style.css.map */
