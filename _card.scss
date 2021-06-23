@@ -1,0 +1,145 @@
+@import "mixins";
+.card {
+
+width: 57.875rem;//54.6rem;
+height: 32.0625rem;//27.3rem;
+border: black solid 2px;
+border-radius: 30px;
+background: white;
+border-style: none;
+//horizrontal, vertical, blur, spread
+box-shadow: 0px 32px 35px 0px rgba( 31, 38, 135, 0.4 );
+
+//For mobile
+@include breakpoint-down(medium) {
+    width: 20.5625rem;
+    height: 32.8125rem;
+   
+
+    }
+}
+
+
+.container {
+transform: translateX(40%);
+flex-direction: column;
+height:65%;
+width:60%;
+padding-left: 3rem ;
+
+//For mobile
+@include breakpoint-down(medium) {
+    transform: translateX(0%);
+    padding-left: 2rem ;
+    height:55%;
+    width:100%;
+  
+}
+}
+.img-container  {
+ 
+position:absolute;
+transform: translateX(-60%);
+
+//for mobile
+@include breakpoint-down(medium) {
+    transform: translateX(-6%);
+    img {width:15.25rem;
+    height: 11.25rem;
+    
+    }
+    top:0;
+    padding-top:2.5rem;
+
+}
+
+}
+.shadow {
+
+    position: absolute;
+   transform:translate(-50%,-38%);
+
+   //for mobile
+   @include breakpoint-down(medium) {
+  
+    transform: translate(5%,32%)rotateX(50deg) scale(0.9);
+}
+}
+.box-container {
+    position: absolute;
+    transform: translate(-240%,25%);
+    transition: transform 400ms ease-in-out;
+}
+
+.faq {
+
+    font-size: $font-lg;
+    font-weight: 900;
+
+    //For mobile
+    @include breakpoint-down(medium) {
+        transform: translateX(33%);
+        
+        }
+  
+}
+
+
+.question {
+width:70%;
+
+    img {
+        padding-top: 0.75rem;
+        padding-right: 5.625rem;
+float:right;
+transition: 300ms ease-in-out;
+
+}
+
+//For mobile
+@include breakpoint-down(medium) {
+width:90%;
+img {
+    padding-top: 1rem;
+    padding-right: 0rem;
+
+    
+}
+}
+}
+
+.rotate img {
+    transition: 250ms ease-in-out;
+transform: scale(1,-1);
+
+}
+
+
+.answer {
+
+   width: 52%;
+   font-family: "Kumbh Sans";
+   font-size: $font-sm;
+padding-left:0.1125rem;
+
+//For mobile
+@include breakpoint-down(medium) {
+    width: 85%;
+    
+}
+
+}
+
+.hide {
+    display:none;
+}
+
+.bold {
+    button {
+       outline:none;
+        transition: 300ms ease-in-out; 
+font-weight: bolder;
+    }
+  
+}
+
