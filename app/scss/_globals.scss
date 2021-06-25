@@ -25,10 +25,10 @@ list-style-type: none;
 font-family: "Kumbh Sans";
 
 
-&:hover + .box-container { //Move box when hovered, box is the next element
+/*&:hover + .box-container { //Move box when hovered, box is the next element
     transform: translate(-248%,25%);
 
-}
+}*/
 }
 li {
 line-height: 3;
@@ -73,7 +73,7 @@ border-bottom: 1px solid $lightGBlue;
 padding-bottom: 1rem;
 transition: color 200ms ease-in-out;
 &:hover {
-
+    
     color: $softRed; 
 }
 

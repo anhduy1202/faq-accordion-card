@@ -25,11 +25,10 @@ body {
 ul, li {
   list-style-type: none;
   font-family: "Kumbh Sans";
-}
+  /*&:hover + .box-container { //Move box when hovered, box is the next element
+    transform: translate(-248%,25%);
 
-ul:hover + .box-container, li:hover + .box-container {
-  -webkit-transform: translate(-248%, 25%);
-          transform: translate(-248%, 25%);
+}*/
 }
 
 li {
@@ -79,6 +78,7 @@ button {
   font-family: "Kumbh Sans";
   background: white;
   cursor: pointer;
+  outline: none;
   border-style: none;
   border-bottom: 1px solid #e7e7e9;
   padding-bottom: 1rem;
@@ -103,6 +103,8 @@ button:hover {
 }
 
 .card {
+  position: relative;
+  overflow: hidden;
   width: 57.875rem;
   height: 32.0625rem;
   border: black solid 2px;
@@ -115,6 +117,7 @@ button:hover {
 
 @media (max-width: 63.9375em) {
   .card {
+    overflow: visible;
     width: 20.5625rem;
     height: 32.8125rem;
   }
@@ -150,10 +153,9 @@ button:hover {
 
 @media (max-width: 63.9375em) {
   .img-container {
-    -webkit-transform: translateX(-6%);
-            transform: translateX(-6%);
+    -webkit-transform: translate(-6%, -52%);
+            transform: translate(-6%, -52%);
     top: 0;
-    padding-top: 2.5rem;
   }
   .img-container img {
     width: 15.25rem;
@@ -163,8 +165,8 @@ button:hover {
 
 .shadow {
   position: absolute;
-  -webkit-transform: translate(-50%, -38%);
-          transform: translate(-50%, -38%);
+  -webkit-transform: translate(-50%, -38.5%);
+          transform: translate(-50%, -38.5%);
 }
 
 @media (max-width: 63.9375em) {
@@ -176,12 +178,13 @@ button:hover {
 
 .box-container {
   position: absolute;
-  -webkit-transform: translate(-240%, 25%);
-          transform: translate(-240%, 25%);
+  -webkit-transform: translate(-248%, 25%);
+          transform: translate(-248%, 25%);
   -webkit-transition: -webkit-transform 400ms ease-in-out;
   transition: -webkit-transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  z-index: 1;
 }
 
 .faq {
